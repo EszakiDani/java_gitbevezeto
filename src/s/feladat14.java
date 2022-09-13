@@ -1,6 +1,7 @@
 package s;
 
 import com.sun.source.tree.SynchronizedTree;
+import com.sun.source.util.SourcePositions;
 
 import java.sql.SQLOutput;
 import java.util.Locale;
@@ -12,7 +13,7 @@ public class feladat14 {
         System.out.println("Kérem:" );
         String szoveg =sc.nextLine();
         String menuPont="";
-        while (menuPont.equals(("f"))){
+        while (!menuPont.equals("f")){
             System.out.println("Adja meg mit akar csinálni a szöveggel: ");
             System.out.println("\ta Nagybetű-");
             System.out.println("\tb - Kisbetű");
@@ -45,6 +46,12 @@ public class feladat14 {
                     }
                     break;
                 case "e":
+                    System.out.print("Kérem adja meg a kezdő karakter sorszámát amit ki szeretne írni:");
+                    int a= sc.nextInt();
+                    sc.nextLine();System.out.print("Kérem adja meg a kezdő karakter sorszámát amit ki szeretne írni:");
+                    int b= sc.nextInt();
+                    sc.nextLine();
+                    System.out.println(szoveg.substring(a-1,b));
                     break;
                 case "f":
                     System.out.println("Viszlát!");
